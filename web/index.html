@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全国 4A 及以上旅游景区导游词库</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">导</span>
+    <div class="brand-txt">
+      <h1>全国 4A 及以上旅游景区导游词库</h1>
+      <p class="sub">
+        5A 精编词条 <b id="m5">–</b> 篇 · 4A 名录 <b id="m4">–</b> 条 ·
+        <b id="mprov">–</b> 个省级行政区 · 核对时间 <b id="mdate">–</b>
+      </p>
+    </div>
+  </div>
+  <div class="search">
+    <svg viewBox="0 0 24 24" class="ico"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" autocomplete="off" placeholder="搜索景区名 / 省份 / 类型 / 导游词内容…">
+    <button id="clearQ" class="clear" title="清空">×</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside id="sidebar">
+    <div class="tabs">
+      <button class="tab active" data-view="region">按地域</button>
+      <button class="tab" data-view="type">按类型</button>
+    </div>
+    <div class="filters">
+      <span class="fl-label">等级</span>
+      <label><input type="radio" name="lv" value="all" checked><span>全部</span></label>
+      <label><input type="radio" name="lv" value="5A"><span>仅 5A</span></label>
+      <label><input type="radio" name="lv" value="4A"><span>仅 4A</span></label>
+    </div>
+    <nav id="nav" class="nav"></nav>
+  </aside>
+
+  <main id="main">
+    <div id="crumb" class="crumb"></div>
+    <div id="toolbar" class="toolbar"></div>
+    <div id="content" class="content"></div>
+  </main>
+</div>
+
+<div id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-title">
+      <span class="badge" id="dBadge">5A</span>
+      <h2 id="dTitle"></h2>
+      <div id="dMeta" class="dmeta"></div>
+    </div>
+    <div class="drawer-actions">
+      <button id="btnCopy" class="btn">复制导游词</button>
+      <button id="btnPrint" class="btn">打印</button>
+      <button id="btnClose" class="btn icon" title="关闭 (Esc)">×</button>
+    </div>
+  </div>
+  <div id="dBody" class="drawer-body"></div>
+</div>
+<div id="mask" class="mask"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
